@@ -11,23 +11,81 @@
 	<short-name>layout-picker-taglib</short-name>
 	<uri>http://chberndt.com/tld/layout-picker</uri>
 	<tag>
-		<description/>
-		<name>alert</name>
+		<description></description>
+		<name>select-layout</name>
 		<tag-class>com.chberndt.liferay.layout.picker.servlet.taglib.SelectLayoutTag</tag-class>
-		<body-content>JSP</body-content>
-		<!--
+		<body-content>empty</body-content>
 		<attribute>
-			<description>TODO</description>
-			<name>id</name>
+			<description></description>
+			<name>checkDisplayPage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>componentId</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
-		-->
 		<attribute>
-			<description>TODO</description>
-			<name>message</name>
+			<description></description>
+			<name>enableCurrentPage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>followURLOnTitleClick</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>itemSelectorSaveEvent</name>
+			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
-		<dynamic-attributes>true</dynamic-attributes>
+		<attribute>
+			<description></description>
+			<name>multiSelection</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>namespace</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>pathThemeImages</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>privateLayout</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>showHiddenLayouts</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>viewType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
 	</tag>
 </taglib>
