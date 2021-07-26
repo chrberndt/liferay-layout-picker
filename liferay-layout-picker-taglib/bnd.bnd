@@ -1,0 +1,9 @@
+Bundle-Name: liferay-layout-picker-taglib
+Bundle-SymbolicName: com.chberndt.liferay.layout.picker.servlet.taglib
+Bundle-Version: 1.0.0
+Provide-Capability:\
+	osgi.extender;\
+		osgi.extender="jsp.taglib";\
+		uri="http://chberndt.com/tld/layout-picker";\
+		version:Version="${Bundle-Version}"
+Web-ContextPath: /layout-picker-taglib
