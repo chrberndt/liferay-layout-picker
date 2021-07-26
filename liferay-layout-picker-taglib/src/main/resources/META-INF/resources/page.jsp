@@ -1,3 +1,9 @@
 <%@ include file="/init.jsp" %>
 
-<h1>SelectLayoutTag page.jsp</h1>
+<%
+Map<String, Object> props = (Map<String, Object>)request.getAttribute("layout-picker:select-layout:data");
+%>
+
+<div class="alert alert-primary" role="alert">
+	<%= props.get("message") %>
+</div>

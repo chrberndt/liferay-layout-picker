@@ -48,7 +48,7 @@ public class SelectLayoutTag extends IncludeTag {
 	protected void setAttributes(HttpServletRequest httpServletRequest) {
 		try {
 			httpServletRequest.setAttribute(
-				"taglib-example:alert:data", _getData());
+				"layout-picker:select-layout:data", _getData());
 		}
 		catch (Exception exception) {
 			_log.error(exception, exception);
