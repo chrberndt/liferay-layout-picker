@@ -7,6 +7,8 @@ PortalUtil.getClassNameId(Layout.class);
 %>
 
 <div class="container-fluid container-fluid-max-xl item-selector lfr-item-viewer">
+	<layout-picker:alert message="From layouts.jsp" />
+	<%--
 	<c:if test="<%= layoutItemSelectorViewDisplayContext.isShowBreadcrumb() %>">
 		<liferay-site-navigation:breadcrumb
 			breadcrumbEntries="<%= layoutItemSelectorViewDisplayContext.getPortletBreadcrumbEntries() %>"
@@ -24,6 +26,8 @@ PortalUtil.getClassNameId(Layout.class);
 		privateLayout="<%= layoutItemSelectorViewDisplayContext.isPrivateLayout() %>"
 		showHiddenLayouts="<%= false %>"
 	/>
+	--%>
+
 </div>
 
 <aui:script>
