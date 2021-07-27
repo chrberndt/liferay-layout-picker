@@ -7,15 +7,13 @@ PortalUtil.getClassNameId(Layout.class);
 %>
 
 <div class="container-fluid container-fluid-max-xl item-selector lfr-item-viewer">
-	<layout-picker:alert message="From layouts.jsp" />
-	<%--
 	<c:if test="<%= layoutItemSelectorViewDisplayContext.isShowBreadcrumb() %>">
 		<liferay-site-navigation:breadcrumb
 			breadcrumbEntries="<%= layoutItemSelectorViewDisplayContext.getPortletBreadcrumbEntries() %>"
 		/>
 	</c:if>
 
-	<liferay-layout:select-layout
+	<layout-picker:select-layout
 		checkDisplayPage="<%= false %>"
 		enableCurrentPage="<%= true %>"
 		followURLOnTitleClick="<%= false %>"
@@ -23,11 +21,9 @@ PortalUtil.getClassNameId(Layout.class);
 		multiSelection="<%= false %>"
 		namespace="<%= liferayPortletResponse.getNamespace() %>"
 		pathThemeImages="<%= themeDisplay.getPathThemeImages() %>"
-		privateLayout="<%= layoutItemSelectorViewDisplayContext.isPrivateLayout() %>"
+		privateLayout="<%= false %>"
 		showHiddenLayouts="<%= false %>"
 	/>
-	--%>
-
 </div>
 
 <aui:script>
