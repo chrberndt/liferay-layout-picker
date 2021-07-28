@@ -34,20 +34,14 @@ PortalUtil.getClassNameId(Layout.class);
 
 		var data = event.data;
 
-		console.log('data = ' + JSON.stringify(data));
-		// console.log('data.layoutId = ' + data.layoutId);
-		// console.log('data.plid = ' + data.plid);
+		// console.log('data = ' + JSON.stringify(data));
 
 		var valObj = {};
-		// TODO: we need the plid, not the layoutId
 		valObj.classPK = data.plid;
-		// valObj.classPK = data.layoutId;
 		valObj.className = '<%= Layout.class.getName() %>';
 		valObj.classNameId = '<%= PortalUtil.getClassNameId(Layout.class) %>';
 		valObj.title = data.name;
 		valObj.titleMap = data.nameMap;
-
-		console.log('valObj = ' + JSON.stringify(valObj));
 
 		event.data.value = JSON.stringify(valObj);
 
