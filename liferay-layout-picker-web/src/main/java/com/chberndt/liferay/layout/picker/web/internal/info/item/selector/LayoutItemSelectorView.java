@@ -35,7 +35,7 @@ import org.osgi.service.component.annotations.Reference;
  * @author Christian Berndt
  */
 @Component(
-	property = "item.selector.view.order:Integer=200",
+	property = "item.selector.view.order:Integer=1",
 	service = ItemSelectorView.class
 )
 public class LayoutItemSelectorView
