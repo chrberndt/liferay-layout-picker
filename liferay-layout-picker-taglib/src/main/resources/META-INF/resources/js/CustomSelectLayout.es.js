@@ -1,17 +1,7 @@
 /**
- * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
+ * 
+ * Based on https://github.com/liferay/liferay-portal/blob/7.3.x/modules/apps/layout/layout-taglib/src/main/resources/META-INF/resources/select_layout/js/SelectLayout.es.js
  */
-
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
@@ -67,7 +57,6 @@ const CustomSelectLayout = ({
 					privateLayout: node.privateLayout,
 					value: node.url,
 				});
-				console.log('node = ' + JSON.stringify(node));
 			}
 		});
 
@@ -92,7 +81,7 @@ const CustomSelectLayout = ({
 	const empty = nodes.length === 0;
 
 	return (
-		<div className="custom-select-layout select-layout">
+		<div className="select-layout">
 			<ClayManagementToolbar>
 				<ClayManagementToolbar.Search
 					onSubmit={(event) => {
