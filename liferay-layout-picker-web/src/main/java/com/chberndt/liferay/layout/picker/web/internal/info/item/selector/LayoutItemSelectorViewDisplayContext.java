@@ -34,13 +34,10 @@ import javax.servlet.http.HttpServletRequest;
 public class LayoutItemSelectorViewDisplayContext {
 
 	public LayoutItemSelectorViewDisplayContext(
-			HttpServletRequest httpServletRequest,
-//	LayoutItemSelectorCriterion layoutItemSelectorCriterion,
-			PortletURL portletURL, String itemSelectedEventName,
-			boolean privateLayout) {
+		HttpServletRequest httpServletRequest, PortletURL portletURL,
+		String itemSelectedEventName, boolean privateLayout) {
 
 		_httpServletRequest = httpServletRequest;
-		//	_layoutItemSelectorCriterion = layoutItemSelectorCriterion;
 		_portletURL = portletURL;
 		_itemSelectedEventName = itemSelectedEventName;
 		_privateLayout = privateLayout;
@@ -146,7 +143,6 @@ public class LayoutItemSelectorViewDisplayContext {
 
 	private final HttpServletRequest _httpServletRequest;
 	private final String _itemSelectedEventName;
-	//		private final LayoutItemSelectorCriterion _layoutItemSelectorCriterion;
 	private final PortletURL _portletURL;
 	private final boolean _privateLayout;
 	private final RenderResponse _renderResponse;
