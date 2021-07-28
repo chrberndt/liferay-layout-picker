@@ -2,8 +2,6 @@
 
 <%
 LayoutItemSelectorViewDisplayContext layoutItemSelectorViewDisplayContext = (LayoutItemSelectorViewDisplayContext)request.getAttribute(LayoutItemSelectorWebKeys.LAYOUT_ITEM_SELECTOR_VIEW_DISPLAY_CONTEXT);
-Layout.class.getName();
-PortalUtil.getClassNameId(Layout.class);
 %>
 
 <div class="container-fluid container-fluid-max-xl item-selector lfr-item-viewer">
