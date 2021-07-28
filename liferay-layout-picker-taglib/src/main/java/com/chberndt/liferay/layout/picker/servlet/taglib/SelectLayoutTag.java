@@ -1,7 +1,6 @@
 package com.chberndt.liferay.layout.picker.servlet.taglib;
 
 import com.chberndt.liferay.layout.picker.servlet.ServletContextUtil;
-
 import com.liferay.exportimport.kernel.staging.StagingUtil;
 import com.liferay.petra.string.StringBundler;
 import com.liferay.petra.string.StringPool;
@@ -51,10 +50,6 @@ public class SelectLayoutTag extends IncludeTag {
 
 	public String getItemSelectorSaveEvent() {
 		return _itemSelectorSaveEvent;
-	}
-
-	public String getMessage() {
-		return _message;
 	}
 
 	public String getNamespace() {
@@ -107,10 +102,6 @@ public class SelectLayoutTag extends IncludeTag {
 
 	public void setItemSelectorSaveEvent(String itemSelectorSaveEvent) {
 		_itemSelectorSaveEvent = itemSelectorSaveEvent;
-	}
-
-	public void setMessage(String message) {
-		_message = message;
 	}
 
 	public void setMultiSelection(boolean multiSelection) {
@@ -300,6 +291,7 @@ public class SelectLayoutTag extends IncludeTag {
 				jsonObject.put("disabled", true);
 			}
 
+			// Add custom attribute plid
 			jsonObject.put(
 				"groupId", layout.getGroupId()
 			).put(
@@ -311,6 +303,8 @@ public class SelectLayoutTag extends IncludeTag {
 			).put(
 				"name", layout.getName(themeDisplay.getLocale())
 			).put(
+				"plid", layout.getPlid()
+			).put(
 				"privateLayout", layout.isPrivateLayout()
 			).put(
 				"url", PortalUtil.getLayoutRelativeURL(layout, themeDisplay)
@@ -320,7 +314,9 @@ public class SelectLayoutTag extends IncludeTag {
 				jsonObject.put("selected", true);
 			}
 
-			jsonObject.put("value", _getLayoutBreadcrumb(layout));
+			// Use Layout.name without public / private page prefix
+			jsonObject.put("value", layout.getName(themeDisplay.getLocale()));
+			// jsonObject.put("value", _getLayoutBreadcrumb(layout));
 
 			jsonArray.put(jsonObject);
 		}
@@ -364,7 +360,6 @@ public class SelectLayoutTag extends IncludeTag {
 	private boolean _enableCurrentPage;
 	private boolean _followURLOnTitleClick;
 	private String _itemSelectorSaveEvent;
-	private String _message;
 	private boolean _multiSelection;
 	private String _namespace;
 	private String _pathThemeImages;
