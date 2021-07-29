@@ -1,6 +1,7 @@
 package com.chberndt.liferay.layout.picker.web.internal.info.item.provider;
 
 import com.chberndt.liferay.layout.picker.web.internal.info.item.LayoutInfoItemFields;
+
 import com.liferay.info.field.InfoFieldValue;
 import com.liferay.info.item.InfoItemFieldValues;
 import com.liferay.info.item.InfoItemReference;
@@ -28,12 +29,12 @@ public class LayoutInfoItemFieldValuesProvider
 
 	@Override
 	public InfoItemFieldValues getInfoItemFieldValues(Layout layout) {
-			return InfoItemFieldValues.builder(
-			).infoFieldValues(
-				_getLayoutInfoFieldValues(layout)
-			).infoItemReference(
-				new InfoItemReference(Layout.class.getName(), layout.getPlid())
-			).build();
+		return InfoItemFieldValues.builder(
+		).infoFieldValues(
+			_getLayoutInfoFieldValues(layout)
+		).infoItemReference(
+			new InfoItemReference(Layout.class.getName(), layout.getPlid())
+		).build();
 	}
 
 	private List<InfoFieldValue<Object>> _getLayoutInfoFieldValues(
@@ -61,4 +62,5 @@ public class LayoutInfoItemFieldValuesProvider
 
 		return null;
 	}
+
 }
